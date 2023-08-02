@@ -1,100 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 
-        body {
-            background-color: aliceblue;
-        }
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            width: 100%;
-            max-width: 400px;
-            height: 400px;
-            max-height: fit-content;
-            background-color: rgb(167, 235, 255);
-            border-radius: 2%;
-        }
+			body {
+				background-color: aliceblue;
+			}
+			.container {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				max-width: 400px;
+				height: 400px;
+				max-height: fit-content;
+				background-color: rgb(167, 235, 255);
+				border-radius: 2%;
+			}
 
-        h2{
-            text-align: center;
-            padding: 30px
-        }
-        label{
-            font-size: 20px;
-            font-weight: lighter;
-            margin: auto 20px;
-        }
-        hr {
-            display: none;
-        }
+			h2 {
+				text-align: center;
+				padding: 30px;
+			}
+			label {
+				font-size: 20px;
+				font-weight: lighter;
+				margin: auto 20px;
+			}
+			hr {
+				display: none;
+			}
 
-        input{
-            margin-top: 10px;
-            margin-left: 20px;
-            width: 90%;
-            padding: 10px;
-            border: none;
-            /* border-color: #a0acec; */
-            border-radius: 10px;
-        }
+			input {
+				margin-top: 10px;
+				margin-left: 20px;
+				width: 90%;
+				padding: 10px;
+				border: none;
+				/* border-color: #a0acec; */
+				border-radius: 10px;
+			}
 
-        button {
-            margin-top: 10%;
-            margin-left: 25%;
-            width: 50%;
-            height: 50px;
-            background-color: blue;
-            color: white;
-            border: none;
-            border-radius: 10px;
-        }
-        button:hover{
-            background-color: lightcyan;
-            color: black;
-        }
-        p{
-            margin-top: 2%;
-            text-align: center;
-        }
+			button {
+				margin-top: 10%;
+				margin-left: 25%;
+				width: 50%;
+				height: 50px;
+				background-color: blue;
+				color: white;
+				border: none;
+				border-radius: 10px;
+			}
+			button:hover {
+				background-color: lightcyan;
+				color: black;
+			}
+			p {
+				margin-top: 2%;
+				text-align: center;
+			}
 
-        a:hover{
-            text-decoration: none;
-            color: coral;
-        }
-    </style>
-</head>
-<body>
-    <form action="#">
-    <div class="container">
-        <div class="form-box">
-            <h2> Welcome! </h2>
-            <hr>
-            <label> Username </label>
-            <input type="text" name="sname" placeholder="Username">
-            <br><br>
-            <label> Password </label>
-            <input type="password" name="pass" placeholder="Password">
-            <br><br>
-            <button type="submit" value="Submit"> Login </button>
+			a:hover {
+				text-decoration: none;
+				color: coral;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#">
+			<div class="container">
+				<div class="form-box">
+					<h2>Welcome!</h2>
+					<hr />
+					<label> Username </label>
+					<input type="text" name="sname" placeholder="Username" />
+					<br /><br />
+					<label> Password </label>
+					<input type="password" name="pass" placeholder="Password" />
+					<br /><br />
+					<button type="submit" value="Submit">Login</button>
 
-            <div class="text-register">
-                <p> Already have an account? <a href="form.html"><span class="login"> Login Here </span></a></p>
-            </div>
-        </div>
-    </div>
-    </form>
-</body>
+					<div class="text-register">
+						<p>
+							Already have an account?
+							<a href="form.html"><span class="login"> Login Here </span></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
 </html>
