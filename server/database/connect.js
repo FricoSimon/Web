@@ -1,9 +1,9 @@
 import mysql from 'mysql';
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: '172.17.0.4',
     port: '3306',
     user: 'root',
-    password: '',
+    password: 'web',
     database: 'web'
 });
 
@@ -12,4 +12,4 @@ db.connect((err) => {
     console.log('Database connected!');
 })
 
-module.exports = db;
+export default db;
