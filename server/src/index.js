@@ -15,17 +15,18 @@ app.post('/api/register', async (req, res) => {
         const { username, password } = req.body;
         const sql = `INSERT INTO user (username, password) VALUES (?, ?)`;
         const values = [username, password];
-        const result = await new Promise((resolve, reject) => {
-            db.query(sql, values, (err, result) => {
-                if (err) reject(err)
-                resolve(result)
-            });
-        })
+        const result = await db.query(sql, values);
+
+        if (result.error) {
+            console.log(result.error);
+            res.status(500).json({ message: result.error });
+            return;
+        }
 
         res.status(201).json({ message: 'Register success' });
     } catch (error) {
-        console.log(req.body);
         console.log(error);
+        res.status(500).json({ message: result.error });
     }
 });
 
