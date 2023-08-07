@@ -1,7 +1,9 @@
 import express from 'express';
 import db from '../database/connect.js';
+import hashPassword from '../util/hash.js';
 const app = express();
 const port = 3000;
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -13,8 +15,9 @@ app.get('/', (req, res) => {
 app.post('/api/register', async (req, res) => {
     try {
         const { username, password } = req.body;
+        const hashedPassword = await hashPassword(password);
         const sql = `INSERT INTO user (username, password) VALUES (?, ?)`;
-        const values = [username, password];
+        const values = [username, hashedPassword];
         const result = await db.query(sql, values);
 
         if (result.error) {
